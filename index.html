@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SGD-LEGAL Unicórdoba</title>
+    <meta
+      name="description"
+      content="Prototipo navegable del Sistema de Gestión Documental Legal y Consolidación Normativa de la Universidad de Córdoba."
+    />
+    <meta name="theme-color" content="#006837" />
+    <link rel="icon" href="assets/emblema.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#app">Saltar al contenido</a>
+    <div class="demo-banner" role="note">Prototipo de demostración — datos ficticios con fines ilustrativos</div>
+    <div id="root"></div>
+    <noscript><p style="padding: 16px">Este prototipo requiere JavaScript habilitado.</p></noscript>
+
+    <!-- Orden de carga: datos → utilidades → estado → dominio → layout → vistas → enrutador -->
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/normas.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/views/publico.js"></script>
+    <script src="js/views/consola.js"></script>
+    <script src="js/views/registro.js"></script>
+    <script src="js/views/validacion.js"></script>
+    <script src="js/views/administracion.js"></script>
+    <script src="js/router.js"></script>
+  </body>
+</html>
