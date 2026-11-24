@@ -9,12 +9,13 @@ on:
 
 jobs:
   verificar:
-    runs-on: ubuntu-latest
+    # Versión fija: ubuntu-latest ya apunta a 26.04, que Playwright aún no soporta.
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
       - run: npm install --no-audit --no-fund
       - run: npx playwright install --with-deps chromium
       - run: npm run lint
